@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+}
+.mp{
+    margin: 2rem;
+    padding: 2rem;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-color: olive;
+    justify-content: space-evenly;
+    color: white;   
+    z-index: 2;
+}
+ul{
+    gap: 1rem;
+}
+h2{
+    font-size: 2rem;
+}
+ul li h2{
+    font-weight: 500;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+li{
+    list-style: none;
+}
+.productItems{
+    position: absolute;
+    padding: 1rem;
+    background-color: olive;
+    display: none;
+}
+li  a:hover{
+    color: crimson;
+}
+.product:hover .productItems{
+    display: block ;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+ul li img{
+    filter: invert(1);
+}
+.image{
+    padding: 80px 0;
+}
+marquee{
+    background-color: rgb(128, 128, 0);
+    color: white;
+}
+.special{
+    background-color: whitesmoke;
+    /* width: 100%; */
+}
+.special p{
+    font-size: 16px;
+    margin-top: .5rem;
+}
+.special h2,.cards h2{
+    font-weight: 400;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    color: white;
+    
+}
+.card{
+    background-color: olive;
+    flex-direction: column;
+    width: 320px;
+    border-radius:5px ;
+    overflow: hidden;
+}
+button{
+    background-color: crimson;
+    padding: 8px;
+    width: 80%;
+    color: white;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: none;
+}
+.img{
+    height: 200px;
+}
+.img img:hover{
+    scale: 1.2;
+    transition: all ease-in-out .4s;
+}
+.details{
+    padding: 1rem;
+}
+.details p{
+   line-height: 20px;
+   font-size: 0.8rem;
+}
+.about{
+    gap: 2rem;
+    padding: 2rem;
+}
+.aboutRight p{
+font-size: 0.9rem;
+word-spacing: 10px;
+}
+.contact{
+    background-color: whitesmoke;
+}
+.contact h2{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.contact .links{
+    padding: 1rem;
+}
+.contact .cards{
+    grid-template-columns: .8fr 1.2fr 1fr 1.5fr;
+    padding: 2rem;
+}
+.contact .cards .card{
+    width: auto;
+    padding: 1rem;
+    line-height: 1.8rem;
+}
+.card ul li{
+    list-style-type: disc;
+    margin-left: 1rem;
+}
+.map{
+    background-color: transparent;
+}
+.footer{
+    padding: 1rem;
+    background-color: whitesmoke;
+}
+.bar{
+    display: none;
+}
+@media screen and (max-width:450px){
+.bar{
+    display: block;
+}
+input:checked ~ .nav{
+    display: block;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    background-color: olive;
+    padding: 1rem;
+    width: 200px;
+    line-height: 2.5rem;
+}
+    .mp{
+    margin: 1rem;
+    padding: 1rem;
+}
+.contact .cards{
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 1rem;
+}
+.contact{
+    background-color: whitesmoke;
+    width: 100%;
+}
+.about{
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+.cards{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.image{
+    width: 112%;
+}
+.nav{
+    display: none;
+}
+.special{
+    width: 100%;
+}
+}

@@ -1,0 +1,478 @@
+@font-face {
+        font-family: "font";
+        /* Choose a name for your font */
+        src: url("./images/D-DIN-Bold.9a5ce67e997fd030.woff2") format("woff2"),
+}
+
+@font-face {
+        font-family: "fontLight";
+        /* Choose a name for your font */
+        src: url("./images/D-DIN.e58c68e58b09fc0e.woff2") format("woff2"),
+}
+
+:root {
+        --var-color: rgba(240, 240, 250, .8);
+}
+
+* {
+        margin: 0;
+}
+
+html,
+body {
+        height: 100%;
+        width: 100%;
+}
+body{
+        overflow-x: hidden;
+}
+aside{
+    font-family: fontLight;
+    position: absolute;
+    top: 10%;
+    right: -10%;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.527);
+    color: white;
+    padding: 1rem;
+    opacity: 0;
+    transition: all 1s, opacity 1s, visibility .2s;
+}
+
+.side {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+hr{
+        background-color: rgba(255, 255, 255, .25);;
+        border: none;
+        height: 1px;
+        width: 100%;
+}
+.side img{
+        border-radius: .5rem;
+}
+.inside{
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+        color: rgba(255, 255, 255, 0.904);
+        width: 100%;
+}
+.inside p{
+        font-size: 12px;
+}
+.inside b{
+        font-size: .8rem;
+        font-weight: 600;
+}
+input{
+        z-index:2 ;
+}
+aside{
+        z-index: 1;
+}
+
+input:hover ~ aside{
+        cursor: pointer;
+        right: 0%;
+        opacity: 1;
+}
+.flex {
+        display: flex;
+        align-items: center;
+}
+nav ul {
+        font-family: font;
+        background-color: black;
+        justify-content: center;
+        padding: 1.2rem 0;
+        gap: 1.5rem;
+        overflow-x: hidden;
+}
+
+li {
+        list-style: none;
+        text-transform: uppercase;
+}
+
+ul li a {
+        font-size: .9rem;
+        text-decoration: none;
+        color: var(--var-color);
+}
+
+ul li a:hover {
+        color: rgba(240, 240, 250, .9);
+}
+
+nav ul li ul {
+        display: none;
+        z-index: 2;
+}
+
+nav ul li ul li {
+        line-height: 1.5rem;
+        cursor: pointer;
+}
+
+nav ul li:hover ul {
+        position: absolute;
+        display: block;
+}
+
+input {
+        background-color: transparent;
+        outline: none;
+        border: .1rem solid var(--var-color);
+        padding: 5px 40px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        cursor: pointer;
+}
+
+.video {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        color: white;
+}
+
+.video video {
+        position: absolute;
+        z-index: -1;
+        scale: 1.2;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+}
+
+.video .desc {
+        font-family: font;
+        position: absolute;
+        top: 45%;
+        left: 8%;
+        width: 50%;
+        flex-direction: column;
+        align-items: start;
+        gap: 1.5rem;
+}
+
+.video .desc h1 {
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 3rem;
+        line-height: 2.6rem;
+}
+
+.desc p {
+        font-family: fontLight;
+        line-height: 1.5rem;
+}
+
+button {
+        padding: 0.8rem 1rem;
+        background-color: transparent;
+        border: 1px solid var(--var-color);
+        color: var(--var-color);
+        border-radius: 3px;
+        cursor: pointer;
+
+}
+
+button i {
+        transition: all 0.3s cubic-bezier(.19, 1, .22, 1);;
+}
+
+button:hover i {
+        margin-left: 5px;
+}
+
+.space {
+        width: 100%;
+        height: 120%;
+        background: url(/images/img1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: rgba(240, 240, 250, 1);
+}
+
+.layer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .8) 100%);
+}
+
+.space .desc {
+        text-align: justify;
+        padding-top: 5rem;
+        position: absolute;
+        left: 45%;
+        width: 50%;
+        font-family: font;
+        flex-direction: column;
+        align-items: start;
+        gap: 1.5rem;
+}
+
+.space .desc h1 {
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 3rem;
+}
+
+.desc p {
+        font-family: fontLight;
+        line-height: 1.5rem;
+}
+
+.space .desc button {
+        background-color: rgba(0, 0, 0, 0.5);
+}
+
+.astro {
+        background: url(/images/img2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+.landing{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        color: white;
+        background-color: rgb(17, 17, 17);
+}
+.landingDesc {
+        font-family: font;
+        position: absolute;
+        top: 15%;
+        left: 8%;
+        width: 50%;
+        flex-direction: column;
+        align-items: start;
+        gap: 1.5rem;
+}
+
+.landingDesc h1{
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 3rem;
+        line-height: 2.6rem;
+}
+
+.landingDesc p {
+        font-family: fontLight;
+        line-height: 1.5rem;
+}
+.layer1 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .8) 100%);
+}
+.footer{
+        font-family: fontLight;
+        justify-content: space-around;
+        padding: 1rem 2rem;
+        background:linear-gradient(transparent,black,black,black,black);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        font-size: .8rem;
+}
+.icon{
+        background-color: rgba(37, 38, 40, .6);
+        padding: 0.8rem;
+        border-radius: 50%;
+}
+.footer ul{
+       gap: 2rem;
+}
+.starlink{
+        position: relative;
+        width: 100%;
+        height: 180%;
+        overflow: hidden;
+        color: white;
+}
+.starlink video{
+        object-fit: cover;
+        object-position: bottom;
+}
+
+/* ===========================
+   MOBILE (max-width: 480px)
+   =========================== */
+@media (max-width: 480px) {
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        padding: 1rem 0.5rem;
+    }
+
+    ul li a {
+        font-size: 0.7rem;
+    }
+
+    input {
+        padding: 5px 20px;
+        font-size: 0.7rem;
+    }
+
+    aside {
+        width: 220px;
+        right: -60%;
+    }
+
+    .video .desc {
+        width: 80%;
+        left: 5%;
+        top: 40%;
+        gap: 1rem;
+    }
+
+    .video .desc h1 {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+
+    .space .desc {
+        width: 90%;
+        left: 5%;
+        padding-top: 3rem;
+    }
+
+    .space .desc h1 {
+        font-size: 2rem;
+    }
+
+    .landingDesc {
+        width: 90%;
+        left: 5%;
+        top: 20%;
+    }
+
+    .landingDesc h1 {
+        font-size: 2rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .footer ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .starlink {
+        height: 120%;
+    }
+}
+
+
+/* ===========================
+   TABLET (481px–768px)
+   =========================== */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    nav ul {
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    ul li a {
+        font-size: 0.85rem;
+    }
+
+    aside {
+        width: 250px;
+        right: -40%;
+    }
+
+    .video .desc {
+        width: 70%;
+        left: 8%;
+        top: 42%;
+    }
+
+    .video .desc h1 {
+        font-size: 2.4rem;
+    }
+
+    .space .desc {
+        width: 70%;
+        left: 25%;
+        padding-top: 4rem;
+    }
+
+    .space .desc h1 {
+        font-size: 2.4rem;
+    }
+
+    .landingDesc {
+        width: 70%;
+        top: 18%;
+    }
+
+    .footer {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .starlink {
+        height: 150%;
+    }
+}
+
+
+/* ===================================
+   SMALL LAPTOP (769px–1024px)
+   =================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    nav ul {
+        gap: 1.2rem;
+    }
+
+    .video .desc {
+        width: 60%;
+    }
+
+    .video .desc h1 {
+        font-size: 2.8rem;
+    }
+
+    .space .desc {
+        width: 60%;
+        left: 35%;
+    }
+
+    .space .desc h1 {
+        font-size: 2.8rem;
+    }
+
+    .landingDesc {
+        width: 60%;
+    }
+
+    aside {
+        width: 260px;
+        right: -30%;
+    }
+
+    .starlink {
+        height: 160%;
+    }
+}

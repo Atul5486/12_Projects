@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+li {
+    list-style: none;
+}
+
+.nav {
+    gap: 1rem;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #0d0d0d;
+    color: #f5f5f5;
+    font-family: "Poppins", sans-serif;
+}
+
+.mp {
+    margin: 2rem;
+    padding: 2rem;
+}
+
+/* ---------------- NAV ---------------- */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #111;
+    /* new dark */
+    color: rgb(255, 238, 143);
+    /* rgb(255, 238, 143) text */
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1);
+    z-index: 5;
+}
+
+ul {
+    gap: 1rem;
+}
+
+ul li img {
+    filter: brightness(1.5);
+}
+
+a {
+    color: rgb(255, 238, 143);
+    font-size: 1.1rem;
+}
+
+a:hover {
+    color: #ff5252;
+    /* neon red hover */
+}
+
+/* dropdown menu */
+.productItems {
+    position: absolute;
+    padding: 1rem;
+    background: #222;
+    border: 1px solid rgb(255, 238, 143);
+    display: none;
+    border-radius: 6px;
+}
+
+.product:hover .productItems {
+    display: block;
+}
+
+/* ---------------- IMAGE SECTION ---------------- */
+.image {
+    padding: 80px 0;
+}
+
+marquee {
+    background: #111;
+    color: rgb(255, 238, 143);
+    padding: 8px;
+}
+
+/* ---------------- SPECIAL SECTION ---------------- */
+.special {
+    background: #1a1a1a;
+    border-left: 5px solid rgb(255, 238, 143);
+}
+
+.special h2 {
+    font-weight: 500;
+    color: rgb(255, 238, 143);
+}
+
+.special p {
+    color: #ccc;
+}
+
+/* ---------------- CARDS ---------------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.card {
+    background: #111;
+    color: #fff;
+    width: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.05);
+    transition: transform .3s;
+    cursor: pointer;
+
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
+}
+
+.img img {
+    transition: .4s ease;
+    height: 200px;
+}
+
+.img img:hover {
+    transform: scale(1.1);
+}
+
+.details h3 {
+    color: rgb(255, 238, 143);
+}
+
+.details p {
+    line-height: 20px;
+    color: #ccc;
+}
+
+/* button */
+button {
+    background: rgb(255, 238, 143);
+    color: #111;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    font-weight: 600;
+    margin-left: 20px;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+button:hover {
+    background: #ff5252;
+    color: white;
+}
+
+/* ---------------- ABOUT SECTION ---------------- */
+.about {
+    gap: 2rem;
+}
+
+.aboutRight p {
+    color: #ccc;
+    word-spacing: 8px;
+}
+
+.aboutLeft img {
+    border-radius: 10px;
+    border: 3px solid rgb(255, 238, 143);
+}
+
+/* ---------------- CONTACT SECTION ---------------- */
+.contact {
+    background: #1a1a1a;
+}
+
+.contact h2 {
+    color: rgb(255, 238, 143);
+    font-weight: 500;
+}
+
+.contact .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.contact .card {
+    background: #111;
+    padding: 1.2rem;
+}
+
+.contact .card h2 {
+    color: rgb(255, 238, 143);
+}
+
+.card ul li {
+    color: #ccc;
+}
+
+/* Map card */
+.map {
+    background: transparent;
+    border: none;
+}
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+    padding: 1rem;
+    background: #111;
+    color: rgb(255, 238, 143);
+    border-top: 2px solid rgb(255, 238, 143);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+.bar {
+    display: none;
+}
+
+@media screen and (max-width:450px) {
+    .bar {
+        display: block;
+    }
+
+    input:checked~.nav {
+        display: block;
+        background: #111;
+        border-left: 2px solid rgb(255, 238, 143);
+        width: 200px;
+        padding: 1rem;
+        position: absolute;
+        top: 4rem;
+        right: 0;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .contact .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+.bar {
+    display: none;
+}
+
+/* For screens from 0px to 1200px */
+@media screen and (max-width:1200px) {
+    .bar {
+        display: block;
+    }
+
+    input:checked~.nav {
+        display: block;
+        background: #111;
+        border-left: 2px solid rgb(255, 238, 143);
+        width: 200px;
+        padding: 1rem;
+        position: absolute;
+        top: 4rem;
+        right: 0;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    /* Make cards one column */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact section cards become one column */
+    .contact .cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* About section column layout */
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Optional: ultra-small screens (0–480px) */
+@media screen and (max-width:480px) {
+    .mp {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
